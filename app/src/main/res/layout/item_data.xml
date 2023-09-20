@@ -27,32 +27,29 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_current"
-                >
+                android:background="@drawable/bg_current">
 
-                <TextView
+                <ImageView
                     android:id="@+id/count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:text="0"
+                    android:src="@drawable/ic_sell_"
                     app:layout_constraintBottom_toBottomOf="@+id/id_id"
                     app:layout_constraintStart_toEndOf="@+id/img_src"
                     app:layout_constraintTop_toTopOf="@+id/id_id"
                     app:layout_constraintVertical_bias="0.75"
-                    tools:ignore="HardcodedText" />
+                    tools:ignore="ContentDescription,HardcodedText" />
 
                 <TextView
                     android:id="@+id/earth_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
                     android:gravity="left"
                     android:text="@{listitem.earthDate}"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/img_src"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
                     app:layout_constraintTop_toBottomOf="@+id/id_id"
-                    app:layout_constraintVertical_bias="0.261"
                     tools:ignore="HardcodedText,RtlHardcoded" />
 
                 <TextView
@@ -67,6 +64,16 @@
                     app:layout_constraintStart_toEndOf="@+id/count"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/ic_calendar"
+                    app:layout_constraintStart_toEndOf="@+id/img_src"
+                    app:layout_constraintTop_toBottomOf="@+id/count"
+                    tools:ignore="ContentDescription" />
 
                 <ImageView
                     android:id="@+id/img_src"
