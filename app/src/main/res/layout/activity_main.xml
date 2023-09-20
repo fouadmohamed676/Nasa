@@ -101,31 +101,32 @@
             android:textStyle="bold"
             tools:ignore="HardcodedText,MissingConstraints"/>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/register"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/jana"
-            android:text="إنشاء حساب"
-            android:textColor="@color/purple_200"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText,MissingConstraints" />
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/register"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:background="@color/transparent"-->
+<!--            android:fontFamily="@font/jana"-->
+<!--            android:text="إنشاء حساب"-->
+<!--            android:textColor="@color/purple_200"-->
+<!--            android:textStyle="bold"-->
+<!--            tools:ignore="HardcodedText,MissingConstraints" />-->
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_skip"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/jana"
-            android:text="تخطي"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText,MissingConstraints" />
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/btn_skip"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:background="@color/transparent"-->
+<!--            android:fontFamily="@font/jana"-->
+<!--            android:text="تخطي"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold"-->
+<!--            tools:ignore="HardcodedText,MissingConstraints" />-->
+<!--   -->
     </LinearLayout>
 </LinearLayout>

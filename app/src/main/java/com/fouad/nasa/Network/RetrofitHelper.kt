@@ -20,7 +20,7 @@ object RetrofitHelper {
 
 
         var retrofit: Retrofit = retrofit2.Retrofit.Builder()
-            .baseUrl(BaseUrl.show_hospitals)
+            .baseUrl(BaseUrl.photos)
             .addConverterFactory(GsonConverterFactory.create())
             .client(mOkHttpClient)
             .build()
