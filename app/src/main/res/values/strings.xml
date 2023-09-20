@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Nasa</string>
+    <string name="welcome">Welcome to Nasa App</string>
+</resources>
