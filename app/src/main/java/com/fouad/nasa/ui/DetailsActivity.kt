@@ -34,13 +34,10 @@ class DetailsActivity :AppCompatActivity(R.layout.activity_details) {
         binding= ActivityDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
         layoutManager = LinearLayoutManager(this)
-
-        binding.recyclerData.layoutManager=layoutManager
+        binding.recyclerData.layoutManager = layoutManager
         binding.recyclerData.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
-//        binding.recyclerData.layoutManager = layoutManager
         binding.recyclerData.setHasFixedSize(true)
         getData()
-        Log.e("","DetailsActivity")
     }
 
     private fun getData() {
@@ -49,7 +46,6 @@ class DetailsActivity :AppCompatActivity(R.layout.activity_details) {
             object : StringRequest(Request.Method.GET, urlData, object : Response.Listener<String?> {
                 @SuppressLint("SuspiciousIndentation")
                 override fun onResponse(response: String?) {
-
                     // hiding our progress bar.
                     Toast.makeText(this@DetailsActivity, "Data Updated..", Toast.LENGTH_SHORT).show()
                     try {
@@ -68,8 +64,7 @@ class DetailsActivity :AppCompatActivity(R.layout.activity_details) {
                                 jsonObjectDetails.getJSONObject("rover"),
                                 jsonObjectDetails.getString("img_src"),
                             )
-                            Log.e("Response  -  : ","Success response ${photo.img_src}")
-
+                            Log.e("Response  : ","Success")
                             adapter = PhotoAdapter(photoArrayList)
                             binding.recyclerData.adapter=adapter
                             photoArrayList.add(photo)
@@ -79,14 +74,13 @@ class DetailsActivity :AppCompatActivity(R.layout.activity_details) {
                         e.printStackTrace()
                     }
                 }
-            }, object : Response.ErrorListener {
-                override fun onErrorResponse(error: VolleyError?) {
-                    // displaying toast message on response failure.
-                    Log.e("tag", "error is " + error!!.message)
-                    Toast.makeText(this@DetailsActivity, "Fail to update data..", Toast.LENGTH_SHORT)
-                        .show()
-                }
-            }) {
+            }, Response.ErrorListener { error ->
+                // displaying toast message on response failure.
+                Log.e("Error Response", "error is " + error!!.message)
+                Toast.makeText(this@DetailsActivity, "Fail to update data..", Toast.LENGTH_SHORT)
+                    .show()
+            })
+            {
                 override fun getParams(): Map<String, String>? {
                     val params: MutableMap<String, String> = HashMap()
                     return params
